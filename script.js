@@ -218,14 +218,14 @@ function Down() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim=activeSlideAnim+6;
+            activeSlideAnim=activeSlideAnim+3;
             if (activeSlideAnim < 89) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 //console.log(activeSlideAnim);
                 b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
                 
             }
-            if (activeSlideAnim >= 89) {
+            if (activeSlideAnim >= 75) {
                 activeSlideAnim = 0;
                 activeBlock = 1;
                 main.style.top = '-100vh';
@@ -260,7 +260,7 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim=activeSlideAnim-6;
+            activeSlideAnim=activeSlideAnim-3;
             if (activeSlideAnim < 89 && activeSlideAnim > 0) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
