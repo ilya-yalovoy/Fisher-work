@@ -1,0 +1,208 @@
+@charset "UTF-8";
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #e0e0e0;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes preloader-bounce {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  min-height: 5000vh;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0vh;
+  left: 0;
+  right: 0;
+  background: url("./img/BG/mob.png") 0 0/100% auto no-repeat;
+  transition: 0.2s;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении; некоторые
+  считают, что необходимо оставлять стрелочный вид для кнопок */
+  cursor: pointer;
+}
+
+/*HEADER*/
+.header .anim-block1 {
+  transition: 5ms;
+  background-color: #fff;
+  background-image: url("./img/block1/1_0001.png");
+  background-position: 0 0;
+  background-size: 100% auto;
+}
+.header .anim-block1 img {
+  opacity: 0;
+  width: 100%;
+}
+.header .header__content {
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  width: 90%;
+  right: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.5s;
+}
+.header .header__content h1 {
+  flex: 1 1 100%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+.header .header__content button {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  left: 17.99px;
+  top: 819.44px;
+  background: #FFA128;
+  border-radius: 25px;
+  margin-right: 6px;
+}
+.header .header__content a {
+  margin-right: 6px;
+}
+.header .header__content-active {
+  right: 0%;
+}
+.header .menu {
+  animation: menu 0.5s ease-in-out 0.8s forwards;
+}
+.header .menu {
+  position: absolute;
+  top: 0px;
+  height: 30px;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header .menu .menu__burger {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70px;
+  justify-content: space-between;
+}
+.header .menu .menu__burger span {
+  background: #333333;
+  border-radius: 2px;
+  height: 7.2px;
+  margin: 0 0 5.4px 0;
+}
+.header .menu .menu__burger span:nth-child(1) {
+  flex: 0 0 100%;
+}
+.header .menu .menu__burger span:nth-child(2) {
+  flex: 0 0 22%;
+}
+.header .menu .menu__burger span:nth-child(3) {
+  flex: 0 0 73%;
+}
+
+/*ABOUT*/
+.about {
+  background-image: url("./img/block2/1_0025.png");
+  background-position: 0 50vh;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  transition: background-position 0.5s;
+}
+.about p {
+  display: inline-block;
+  font-family: Roboto;
+  font-size: 21px;
+  color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  transition: 0.5s;
+}
+.about .about__content1 {
+  top: 0;
+}
+.about .about__content2 {
+  bottom: 0;
+  opacity: 0;
+}
