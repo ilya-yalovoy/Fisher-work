@@ -220,7 +220,7 @@ function Down() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim=activeSlideAnim+2;
+            activeSlideAnim=activeSlideAnim+1;
             if (activeSlideAnim < 89) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 //console.log(activeSlideAnim);
@@ -263,7 +263,7 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim=activeSlideAnim-2;
+            activeSlideAnim=activeSlideAnim-1;
             if (activeSlideAnim < 89 && activeSlideAnim > 0) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
