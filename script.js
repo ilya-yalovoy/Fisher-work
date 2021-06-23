@@ -188,10 +188,11 @@ var main   = document.querySelector('.wrapper'),
           document.body.classList.add('loaded');
           document.body.classList.remove('loaded_hiding');
           b1Content.classList.add('header__content-active');
+          document.body.scrollTop = 0;
         }, 500);}
 
 var objMain = {
-    //STATIC
+    
     blocks:[ b1Anim ],
     breackpoints:[],
 };
@@ -202,6 +203,7 @@ var objMain = {
 var last_scroll;
 console.log(arr1.length);
 document.addEventListener("scroll", function() {
+   
     //console.log(activeSlideAnim);
     if(window.scrollY > last_scroll){
         last_scroll = window.scrollY;
@@ -218,14 +220,14 @@ function Down() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim=activeSlideAnim+3;
+            activeSlideAnim=activeSlideAnim+2;
             if (activeSlideAnim < 89) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 //console.log(activeSlideAnim);
                 b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
                 
             }
-            if (activeSlideAnim >= 75) {
+            if (activeSlideAnim >= 89) {
                 activeSlideAnim = 0;
                 activeBlock = 1;
                 main.style.top = '-100vh';
@@ -249,6 +251,7 @@ function Down() {
                 activeBlock = 1;
                 main.style.top = '-100vh';
             }*/
+            
             break;
         default:
             break;
@@ -260,7 +263,7 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim=activeSlideAnim-3;
+            activeSlideAnim=activeSlideAnim-2;
             if (activeSlideAnim < 89 && activeSlideAnim > 0) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
