@@ -76,7 +76,7 @@ body, html {
   left: 0;
   right: 0;
   background: url("./img/BG/mob.png") 0 0/100% auto no-repeat;
-  transition: 0.2s;
+  transition: 1s;
 }
 
 .container {
@@ -97,6 +97,9 @@ button {
 }
 
 /*HEADER*/
+.header {
+  max-height: 100;
+}
 .header .anim-block1 {
   transition: 5ms;
   background-color: #fff;
