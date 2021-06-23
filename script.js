@@ -181,7 +181,7 @@ var main   = document.querySelector('.wrapper'),
     b2Content2 = document.querySelector('.about__content2'),
     activeSlideAnim = 0,
     activeBlock = 0;
-
+    console.log(document.querySelector('.block1'));
     window.onload = function () {
         document.body.classList.add('loaded_hiding');
         window.setTimeout(function () {
@@ -218,7 +218,7 @@ function Down() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim++;
+            activeSlideAnim=activeSlideAnim+2;
             if (activeSlideAnim < 89) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 //console.log(activeSlideAnim);
@@ -260,7 +260,7 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim--;
+            activeSlideAnim=activeSlideAnim-2;
             if (activeSlideAnim < 89 && activeSlideAnim > 0) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
