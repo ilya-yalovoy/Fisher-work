@@ -44,87 +44,47 @@ var arr1 = [
 "./img/block1/1_0169.png",
 "./img/block1/1_0173.png",
 "./img/block1/1_0177.png",
-"./img/block1/1_0180.png"
         ];
 var arr2 = [
-    "./img/block2/1_0025.png",
-"./img/block2/1_0027.png",
-"./img/block2/1_0029.png",
-"./img/block2/1_0031.png",
-"./img/block2/1_0033.png",
-"./img/block2/1_0035.png",
-"./img/block2/1_0037.png",
-"./img/block2/1_0039.png",
-"./img/block2/1_0041.png",
-"./img/block2/1_0043.png",
-"./img/block2/1_0045.png",
-"./img/block2/1_0047.png",
-"./img/block2/1_0049.png",
-"./img/block2/1_0051.png",
-"./img/block2/1_0053.png",
-"./img/block2/1_0055.png",
-"./img/block2/1_0057.png",
-"./img/block2/1_0059.png",
-"./img/block2/1_0061.png",
-"./img/block2/1_0063.png",
-"./img/block2/1_0065.png",
-"./img/block2/1_0067.png",
-"./img/block2/1_0069.png",
-"./img/block2/1_0071.png",
-"./img/block2/1_0073.png",
-"./img/block2/1_0075.png",
-"./img/block2/1_0077.png",
-"./img/block2/1_0079.png",
-"./img/block2/1_0081.png",
-"./img/block2/1_0083.png",
-"./img/block2/1_0085.png",
-"./img/block2/1_0087.png",
-"./img/block2/1_0089.png",
-"./img/block2/1_0091.png",
-"./img/block2/1_0093.png",
-"./img/block2/1_0095.png",
-"./img/block2/1_0097.png",
-"./img/block2/1_0099.png",
-"./img/block2/1_0101.png",
-"./img/block2/1_0103.png",
-"./img/block2/1_0105.png",
-"./img/block2/1_0107.png",
-"./img/block2/1_0109.png",
-"./img/block2/1_0111.png",
-"./img/block2/1_0113.png",
-"./img/block2/1_0115.png",
-"./img/block2/1_0117.png",
-"./img/block2/1_0119.png",
-"./img/block2/1_0121.png",
-"./img/block2/1_0123.png",
-"./img/block2/1_0125.png",
-"./img/block2/1_0127.png",
-"./img/block2/1_0129.png",
-"./img/block2/1_0131.png",
-"./img/block2/1_0133.png",
-"./img/block2/1_0135.png",
-"./img/block2/1_0137.png",
-"./img/block2/1_0139.png",
-"./img/block2/1_0141.png",
-"./img/block2/1_0143.png",
-"./img/block2/1_0145.png",
-"./img/block2/1_0147.png",
-"./img/block2/1_0149.png",
-"./img/block2/1_0151.png",
-"./img/block2/1_0153.png",
-"./img/block2/1_0155.png",
-"./img/block2/1_0157.png",
-"./img/block2/1_0159.png",
-"./img/block2/1_0161.png",
-"./img/block2/1_0163.png",
-"./img/block2/1_0165.png",
-"./img/block2/1_0167.png",
-"./img/block2/1_0169.png",
-"./img/block2/1_0171.png",
-"./img/block2/1_0173.png",
-"./img/block2/1_0175.png",
-"./img/block2/1_0177.png",
-"./img/block2/1_0179.png"
+    "./img/block2/1_0027.png",
+    "./img/block2/1_0031.png",
+    "./img/block2/1_0035.png",
+    "./img/block2/1_0039.png",
+    "./img/block2/1_0043.png",
+    "./img/block2/1_0047.png",
+    "./img/block2/1_0051.png",
+    "./img/block2/1_0055.png",
+    "./img/block2/1_0059.png",
+    "./img/block2/1_0063.png",
+    "./img/block2/1_0067.png",
+    "./img/block2/1_0071.png",
+    "./img/block2/1_0075.png",
+    "./img/block2/1_0079.png",
+    "./img/block2/1_0083.png",
+    "./img/block2/1_0087.png",
+    "./img/block2/1_0091.png",
+    "./img/block2/1_0095.png",
+    "./img/block2/1_0099.png",
+    "./img/block2/1_0103.png",
+    "./img/block2/1_0107.png",
+    "./img/block2/1_0111.png",
+    "./img/block2/1_0115.png",
+    "./img/block2/1_0119.png",
+    "./img/block2/1_0123.png",
+    "./img/block2/1_0127.png",
+    "./img/block2/1_0131.png",
+    "./img/block2/1_0135.png",
+    "./img/block2/1_0139.png",
+    "./img/block2/1_0143.png",
+    "./img/block2/1_0147.png",
+    "./img/block2/1_0151.png",
+    "./img/block2/1_0155.png",
+    "./img/block2/1_0159.png",
+    "./img/block2/1_0163.png",
+    "./img/block2/1_0167.png",
+    "./img/block2/1_0171.png",
+    "./img/block2/1_0175.png",
+    "./img/block2/1_0179.png"
 ];
 var main   = document.querySelector('.wrapper'),
     //Block1
@@ -138,7 +98,6 @@ var main   = document.querySelector('.wrapper'),
     bool = false;
     activeSlideAnim = 0,
     activeBlock = 0;
-    console.log(document.querySelector('.block1'));
     window.onload = function () {
         document.body.classList.add('loaded_hiding');
         window.setTimeout(function () {
@@ -155,16 +114,13 @@ var objMain = {
 };
 
 
-
-
 var last_scroll;
 document.addEventListener("scroll", function() {
-    if (last_scroll<=500 || last_scroll >=10500) {
+    if (last_scroll<=500 || last_scroll >=39500) {
         antiBager();
     }
     //console.log(activeSlideAnim);
     if (bool) {
-        console.log('url("' + arr1[activeSlideAnim] + '")');
         if(window.scrollY > last_scroll){
             last_scroll = window.scrollY;
             Down();
@@ -191,7 +147,7 @@ function Down() {
             break;
         case 1:
             if (activeSlideAnim < 75) {activeSlideAnim++;}
-            AnimationSlide(b2Anim, arr2, 0, 75);
+            AnimationSlide(b2Anim, arr2, 0, 39);
             if (activeSlideAnim>29 && activeSlideAnim<31) {
                 b2Anim.style.backgroundPosition = '0 0vh';
                 b2Content1.style.opacity = '0';
@@ -221,7 +177,7 @@ function Up() {
                 activeBlock = 0;
                 main.style.top = '0vh';
             }
-            AnimationSlide(b2Anim, arr2, 0, 80);
+            AnimationSlide(b2Anim, arr2, 0, 31);
             if (activeSlideAnim>29 && activeSlideAnim<31) {
                 b2Anim.style.backgroundPosition = '0 50vh';
                 b2Content1.style.opacity = '1';
@@ -239,11 +195,12 @@ function Up() {
 function AnimationSlide(elem, arr, min, max) {
     if (activeSlideAnim < max && activeSlideAnim > min) {
         elem.style.backgroundImage = 'url("' + arr[activeSlideAnim] + '")';           
+        console.log('url("' + arr[activeSlideAnim] + '")')
     }
 }
 
 function antiBager() {
     bool = false;
-    document.body.scrollTop = 5250;
+    document.body.scrollTop = 20000;
     bool = true;
 }
