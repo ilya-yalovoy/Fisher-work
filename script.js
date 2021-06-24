@@ -1,94 +1,49 @@
 var arr1 = [
-    "./img/block1/1_0001.png",
-"./img/block1/1_0003.png",
+    "./img/block1/1_0001.png",                     
 "./img/block1/1_0005.png",
-"./img/block1/1_0007.png",
 "./img/block1/1_0009.png",
-"./img/block1/1_0011.png",
 "./img/block1/1_0013.png",
-"./img/block1/1_0015.png",
 "./img/block1/1_0017.png",
-"./img/block1/1_0019.png",
 "./img/block1/1_0021.png",
-"./img/block1/1_0023.png",
 "./img/block1/1_0025.png",
-"./img/block1/1_0027.png",
 "./img/block1/1_0029.png",
-"./img/block1/1_0031.png",
 "./img/block1/1_0033.png",
-"./img/block1/1_0035.png",
 "./img/block1/1_0037.png",
-"./img/block1/1_0039.png",
 "./img/block1/1_0041.png",
-"./img/block1/1_0043.png",
 "./img/block1/1_0045.png",
-"./img/block1/1_0047.png",
 "./img/block1/1_0049.png",
-"./img/block1/1_0051.png",
 "./img/block1/1_0053.png",
-"./img/block1/1_0055.png",
 "./img/block1/1_0057.png",
-"./img/block1/1_0059.png",
 "./img/block1/1_0061.png",
-"./img/block1/1_0063.png",
 "./img/block1/1_0065.png",
-"./img/block1/1_0067.png",
 "./img/block1/1_0069.png",
-"./img/block1/1_0071.png",
 "./img/block1/1_0073.png",
-"./img/block1/1_0075.png",
 "./img/block1/1_0077.png",
-"./img/block1/1_0079.png",
 "./img/block1/1_0081.png",
-"./img/block1/1_0083.png",
 "./img/block1/1_0085.png",
-"./img/block1/1_0087.png",
 "./img/block1/1_0089.png",
-"./img/block1/1_0091.png",
 "./img/block1/1_0093.png",
-"./img/block1/1_0095.png",
 "./img/block1/1_0097.png",
-"./img/block1/1_0099.png",
 "./img/block1/1_0101.png",
-"./img/block1/1_0103.png",
 "./img/block1/1_0105.png",
-"./img/block1/1_0107.png",
 "./img/block1/1_0109.png",
-"./img/block1/1_0111.png",
 "./img/block1/1_0113.png",
-"./img/block1/1_0115.png",
 "./img/block1/1_0117.png",
-"./img/block1/1_0119.png",
 "./img/block1/1_0121.png",
-"./img/block1/1_0123.png",
 "./img/block1/1_0125.png",
-"./img/block1/1_0127.png",
 "./img/block1/1_0129.png",
-"./img/block1/1_0131.png",
 "./img/block1/1_0133.png",
-"./img/block1/1_0135.png",
 "./img/block1/1_0137.png",
-"./img/block1/1_0139.png",
 "./img/block1/1_0141.png",
-"./img/block1/1_0143.png",
 "./img/block1/1_0145.png",
-"./img/block1/1_0147.png",
 "./img/block1/1_0149.png",
-"./img/block1/1_0151.png",
 "./img/block1/1_0153.png",
-"./img/block1/1_0155.png",
 "./img/block1/1_0157.png",
-"./img/block1/1_0159.png",
 "./img/block1/1_0161.png",
-"./img/block1/1_0163.png",
 "./img/block1/1_0165.png",
-"./img/block1/1_0167.png",
 "./img/block1/1_0169.png",
-"./img/block1/1_0171.png",
 "./img/block1/1_0173.png",
-"./img/block1/1_0175.png",
 "./img/block1/1_0177.png",
-"./img/block1/1_0179.png",
 "./img/block1/1_0180.png"
         ];
 var arr2 = [
@@ -203,7 +158,6 @@ var objMain = {
 
 
 var last_scroll;
-console.log(arr1.length);
 document.addEventListener("scroll", function() {
     if (last_scroll<=500 || last_scroll >=10500) {
         antiBager();
@@ -226,10 +180,9 @@ function Down() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim++;     
-            activeSlideAnim++;           
-            AnimationSlide(b1Anim, arr1, 0, 60);
-            if (activeSlideAnim >= 59) {
+            activeSlideAnim++;              
+            AnimationSlide(b1Anim, arr1, 0, 49);
+            if (activeSlideAnim >= 48) {
                 activeSlideAnim = 0;
                 activeBlock = 1;
                 main.style.top = '-100vh';
@@ -254,9 +207,8 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim--; 
-            activeSlideAnim--;             
-            AnimationSlide(b1Anim, arr1, 0, 60);
+            activeSlideAnim--;              
+            AnimationSlide(b1Anim, arr1, 0, 49);
             if (last_scroll == 0) {
                 activeSlideAnim = 0;
             }
@@ -264,8 +216,7 @@ function Up() {
         case 1:
             activeSlideAnim--;
             if (activeSlideAnim <= 0) {
-                document.body.scrollTop = 900;
-                activeSlideAnim = 60;
+                activeSlideAnim = 49;
                 activeBlock = 0;
                 main.style.top = '0vh';
             }
