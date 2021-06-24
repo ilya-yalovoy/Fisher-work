@@ -220,6 +220,7 @@ function Down() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
+            activeSlideAnim++;    
             activeSlideAnim++;            
             
             if (activeSlideAnim < 60) {
@@ -264,6 +265,7 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
+            activeSlideAnim--;  
             activeSlideAnim--;            
             
             if (activeSlideAnim < 60 && activeSlideAnim > 0) {
