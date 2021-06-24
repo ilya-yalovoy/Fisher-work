@@ -182,8 +182,8 @@ function Down() {
     switch (activeBlock) {
         case 0:
             activeSlideAnim++;              
-            AnimationSlide(b1Anim, arr1, 0, 48);
-            if (activeSlideAnim >= 47) {
+            AnimationSlide(b1Anim, arr1, 0, 45);
+            if (activeSlideAnim >= 44) {
                 activeSlideAnim = 0;
                 activeBlock = 1;
                 main.style.top = '-100vh';
@@ -209,7 +209,7 @@ function Up() {
     switch (activeBlock) {
         case 0:
             activeSlideAnim--;              
-            AnimationSlide(b1Anim, arr1, 0, 47);
+            AnimationSlide(b1Anim, arr1, 0, 45);
             if (last_scroll == 0) {
                 activeSlideAnim = 0;
             }
