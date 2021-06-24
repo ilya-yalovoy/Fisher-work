@@ -223,6 +223,7 @@ function Down() {
             activeSlideAnim++;
             activeSlideAnim++;
             activeSlideAnim++;
+            
             if (activeSlideAnim < 89) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 //console.log(activeSlideAnim);
@@ -268,6 +269,7 @@ function Up() {
             activeSlideAnim--;
             activeSlideAnim--;
             activeSlideAnim--;
+            
             if (activeSlideAnim < 89 && activeSlideAnim > 0) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
