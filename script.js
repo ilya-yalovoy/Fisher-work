@@ -221,6 +221,8 @@ function Down() {
     switch (activeBlock) {
         case 0:
             activeSlideAnim++;
+            activeSlideAnim++;
+            activeSlideAnim++;
             if (activeSlideAnim < 89) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
                 //console.log(activeSlideAnim);
@@ -263,6 +265,8 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
+            activeSlideAnim--;
+            activeSlideAnim--;
             activeSlideAnim--;
             if (activeSlideAnim < 89 && activeSlideAnim > 0) {
                 //console.log('url("' + arr1[activeSlideAnim] + '")');
