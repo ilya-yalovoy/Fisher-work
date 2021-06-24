@@ -257,7 +257,8 @@ function Up() {
             break;
         case 1:
             activeSlideAnim--;
-            if (activeSlideAnim <= 0) {
+            if (activeSlideAnim <= 0 || last_scroll <= 0) {
+                document.body.scrollTop = 600;
                 activeSlideAnim = 60;
                 activeBlock = 0;
                 main.style.top = '0vh';
