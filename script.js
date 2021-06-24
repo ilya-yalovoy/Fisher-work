@@ -170,7 +170,7 @@ var arr2 = [
 "./img/block2/1_0175.png",
 "./img/block2/1_0177.png",
 "./img/block2/1_0179.png"
-]
+];
 var main   = document.querySelector('.wrapper'),
     //Block1
     b1Anim = document.querySelector('.anim-block1'),
@@ -220,15 +220,8 @@ function Down() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim++;    
-            activeSlideAnim++;            
-            
-            if (activeSlideAnim < 60) {
-                //console.log('url("' + arr1[activeSlideAnim] + '")');
-                //console.log(activeSlideAnim);
-                b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
-                
-            }
+            activeSlideAnim++;           
+            AnimationSlide(b1Anim, arr1, 0, 60);
             if (activeSlideAnim >= 60) {
                 activeSlideAnim = 0;
                 activeBlock = 1;
@@ -237,23 +230,12 @@ function Down() {
             break;
         case 1:
             activeSlideAnim++;
-            if (activeSlideAnim < 80) {
-                //console.log('url("' + arr1[activeSlideAnim] + '")');
-                //console.log(activeSlideAnim);
-                b2Anim.style.backgroundImage = 'url("' + arr2[activeSlideAnim] + '")';
-                
-            }
+            AnimationSlide(b2Anim, arr2, 0, 75);
             if (activeSlideAnim>29 && activeSlideAnim<31) {
                 b2Anim.style.backgroundPosition = '0 0vh';
                 b2Content1.style.opacity = '0';
                 b2Content2.style.opacity = '1';
-            }
-            /*if (activeSlideAnim >= 80) {
-                activeSlideAnim = 0;
-                activeBlock = 1;
-                main.style.top = '-100vh';
-            }*/
-            
+            }            
             break;
         default:
             break;
@@ -265,14 +247,8 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
-            activeSlideAnim--;  
-            activeSlideAnim--;            
-            
-            if (activeSlideAnim < 60 && activeSlideAnim > 0) {
-                //console.log('url("' + arr1[activeSlideAnim] + '")');
-                b1Anim.style.backgroundImage = 'url("' + arr1[activeSlideAnim] + '")';
-                
-            }
+            activeSlideAnim--;             
+            AnimationSlide(b1Anim, arr1, 0, 60);
             if (last_scroll == 0) {
                 activeSlideAnim = 0;
             }
@@ -284,22 +260,12 @@ function Up() {
                 activeBlock = 0;
                 main.style.top = '0vh';
             }
-            if (activeSlideAnim < 80 && activeSlideAnim > 0) {
-                //console.log('url("' + arr1[activeSlideAnim] + '")');
-                //console.log(activeSlideAnim);
-                b2Anim.style.backgroundImage = 'url("' + arr2[activeSlideAnim] + '")';
-                
-            }
+            AnimationSlide(b2Anim, arr2, 0, 80);
             if (activeSlideAnim>29 && activeSlideAnim<31) {
                 b2Anim.style.backgroundPosition = '0 50vh';
                 b2Content1.style.opacity = '1';
                 b2Content2.style.opacity = '0';
             }
-            /*if (activeSlideAnim >= 80) {
-                activeSlideAnim = 0;
-                activeBlock = 1;
-                main.style.top = '-100vh';
-            }*/
             break;
         default:
             break;
@@ -307,3 +273,10 @@ function Up() {
 }
 
 
+
+
+function AnimationSlide(elem, arr, min, max) {
+    if (activeSlideAnim < max && activeSlideAnim > min) {
+        elem.style.backgroundImage = 'url("' + arr[activeSlideAnim] + '")';           
+    }
+}
