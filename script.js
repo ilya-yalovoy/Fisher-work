@@ -179,6 +179,8 @@ var main   = document.querySelector('.wrapper'),
     b2Anim = document.querySelector('.about');
     b2Content1 = document.querySelector('.about__content1'),
     b2Content2 = document.querySelector('.about__content2'),
+
+    bool = false;
     activeSlideAnim = 0,
     activeBlock = 0;
     console.log(document.querySelector('.block1'));
@@ -188,8 +190,8 @@ var main   = document.querySelector('.wrapper'),
           document.body.classList.add('loaded');
           document.body.classList.remove('loaded_hiding');
           b1Content.classList.add('header__content-active');
-          document.body.scrollTop = 0;
-        }, 500);}
+          antiBager();
+    }, 500);}
 
 var objMain = {
     
@@ -203,15 +205,19 @@ var objMain = {
 var last_scroll;
 console.log(arr1.length);
 document.addEventListener("scroll", function() {
-   
+    if (last_scroll<=500 || last_scroll >=10500) {
+        antiBager();
+    }
     //console.log(activeSlideAnim);
-    if(window.scrollY > last_scroll){
-        last_scroll = window.scrollY;
-        Down();
-      }else{
-        last_scroll = window.scrollY;
-        Up();
-      }
+    if (bool) {
+        if(window.scrollY > last_scroll){
+            last_scroll = window.scrollY;
+            Down();
+          }else{
+            last_scroll = window.scrollY;
+            Up();
+          }
+    }
       
 });                                                              //ПРОВЕРЯЕТ КУДА КРУТИТСЯ СКРОЛ
 
@@ -223,14 +229,14 @@ function Down() {
             activeSlideAnim++;     
             activeSlideAnim++;           
             AnimationSlide(b1Anim, arr1, 0, 60);
-            if (activeSlideAnim >= 60) {
+            if (activeSlideAnim >= 59) {
                 activeSlideAnim = 0;
                 activeBlock = 1;
                 main.style.top = '-100vh';
             }
             break;
         case 1:
-            activeSlideAnim++;
+            if (activeSlideAnim < 75) {activeSlideAnim++;}
             AnimationSlide(b2Anim, arr2, 0, 75);
             if (activeSlideAnim>29 && activeSlideAnim<31) {
                 b2Anim.style.backgroundPosition = '0 0vh';
@@ -257,8 +263,8 @@ function Up() {
             break;
         case 1:
             activeSlideAnim--;
-            if (activeSlideAnim <= 0 || last_scroll <= 0) {
-                document.body.scrollTop = 600;
+            if (activeSlideAnim <= 0) {
+                document.body.scrollTop = 900;
                 activeSlideAnim = 60;
                 activeBlock = 0;
                 main.style.top = '0vh';
@@ -282,4 +288,10 @@ function AnimationSlide(elem, arr, min, max) {
     if (activeSlideAnim < max && activeSlideAnim > min) {
         elem.style.backgroundImage = 'url("' + arr[activeSlideAnim] + '")';           
     }
+}
+
+function antiBager() {
+    bool = false;
+    document.body.scrollTop = 5250;
+    bool = true;
 }
