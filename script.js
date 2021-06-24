@@ -220,6 +220,7 @@ function Down() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
+            activeSlideAnim++;     
             activeSlideAnim++;           
             AnimationSlide(b1Anim, arr1, 0, 60);
             if (activeSlideAnim >= 60) {
@@ -247,6 +248,7 @@ function Up() {
     if (activeSlideAnim<0) {activeSlideAnim = 0;}
     switch (activeBlock) {
         case 0:
+            activeSlideAnim--; 
             activeSlideAnim--;             
             AnimationSlide(b1Anim, arr1, 0, 60);
             if (last_scroll == 0) {
